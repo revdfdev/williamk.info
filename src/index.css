@@ -7,23 +7,23 @@ html, body {
 
 @font-face {
     font-family: Quicksand;
-    src: url(./assets/fonts/Quicksand-Regular.ttf);
+    src: url(./_assets/fonts/Quicksand-Regular.ttf);
 }
 
 @font-face {
     font-family: Quicksand;
-    src: url(./assets/fonts/Quicksand-Bold.ttf);
+    src: url(./_assets/fonts/Quicksand-Bold.ttf);
     font-weight: bolder;
 }
 
 @font-face {
     font-family: Quicksand;
-    src: url(./assets/fonts/Quicksand-Medium.ttf);
+    src: url(./_assets/fonts/Quicksand-Medium.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: Quicksand;
-    src: url(./assets/fonts/Quicksand-Light.ttf);
+    src: url(./_assets/fonts/Quicksand-Light.ttf);
     font-weight: lighter;
 }
