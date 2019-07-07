@@ -6,8 +6,8 @@
 #       June 8, 2019
 
 # Pull in containers that were just created from the docker compose
-docker pull uwiuga/nginx_site
-docker pull uwiuga/next_site
+docker pull wkwok16/nginx_site
+docker pull wkwok16/next_site
 
 # Remove old containers
 docker rm -f site
@@ -22,12 +22,13 @@ docker rm -f next_site
 docker run -d \
 -p 3000:3000 \
 --name next_site \
-uwiuga/next_site
+wkwok16/next_site
 
 # Run the nginx container passing in the certification files as read only, and making sure the 
 # network is running off the host so it can bypass any weird issues. 
+# TODO: change
 docker run -d \
 --net=host \
 -v /certs:/certs/iuga:ro \
 --name site \
-uwiuga/nginx_site
+wkwok16/nginx_site

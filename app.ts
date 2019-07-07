@@ -1,6 +1,5 @@
 import express, { Request, Response } from 'express';
 import next from 'next';
-import { CURRENT_YEAR } from './components/_data/constantsToChangeEachYear';
 
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production'
@@ -22,13 +21,6 @@ const handle = app.getRequestHandler();
 app.prepare()
     .then(() => {
         const server = express();
-
-        /** 
-         * This is the elections endpoint that provides the year as a parameter
-         */
-        server.get('/elections/:year', (req: Request, res: Response) => {
-            return app.render(req, res, '/elections', { year: req.params.year || CURRENT_YEAR });
-        })
 
         server.get('*', (req: Request, res: Response) => {
             return handle(req, res)
