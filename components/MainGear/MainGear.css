@@ -15,3 +15,7 @@
     stroke-miterlimit: 10;
     transform-origin: center center;
 }
+
+.image-thing {
+    clip-path: circle(200px at center);
+}
