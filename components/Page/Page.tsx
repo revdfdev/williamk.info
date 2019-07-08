@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import { NavigationBar } from '../NavigationBar/NavigationBar';
 import { Fonts } from '../Fonts/Fonts';
 import './Page.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HeaderBar } from './HeaderBar/HeaderBar';
 import { HelmetContent } from './HelmetContent/HelmetContent';
 
 type PageProps = {
@@ -29,8 +27,6 @@ export const Page: React.FC<PageProps> = ({ children, pathname }) => {
 
     return <>
         <HelmetContent />
-        <NavigationBar pathname={pathname} />
-        <HeaderBar pathname={pathname} />
         <div className="page-content">
             {children}
         </div>

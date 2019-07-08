@@ -1,5 +1,6 @@
 import React from 'react';
 import "../pageStyles/index.css";
+import { MainGear } from '../components/MainGear/MainGear';
 
 /**
  * IndexPage is the home page shown at route "/"
@@ -10,7 +11,7 @@ import "../pageStyles/index.css";
  */
 const IndexPage: React.FC = () => {
     return <>
-        Index page
+        <MainGear />
     </>
 }
 

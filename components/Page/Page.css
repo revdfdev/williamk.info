@@ -1,17 +1,18 @@
 body {
     margin: 0px;
     padding: 0px;
-    font-family: "PT Sans", sans-serif !important;
-    background-color: #ebebeb !important;
+    font-family: "Quicksand", sans-serif !important;
+    background-color: #eeeeee !important;
+    overflow-x: hidden;
 }
 
 .page-content {
     margin: auto;
-    width: 80%;
+    width: 90%;
 }
 
 a, a:hover, a:active, a:focus, a:visited {
-    color: #39275B !important;
+    color: #005696 !important;
     text-decoration: none !important;
 }
 
