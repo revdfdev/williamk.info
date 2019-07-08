@@ -16,6 +16,22 @@
     transform-origin: center center;
 }
 
-.image-thing {
-    clip-path: circle(200px at center);
+.st3 {
+    stroke-width: 2 !important;
+}
+
+.gear-image {
+    clip-path: url(#clip-circle-path);
+}
+
+.gear-image-image {
+    transition: opacity 0.5s;
+}
+
+.gear-image-hidden {
+    opacity: 0;
+}
+
+.gear-image-show {
+    opacity: 1;
 }
