@@ -6,7 +6,7 @@ import './MainGear.css';
 export const MainGear: React.FC = () => {
     const [complete, setComplete] = useState<boolean>(false);
 
-    return <>
+    return <div>
     <svg style={{ display: 'inline', position: 'absolute', margin: 'auto'}} 
         version="1.1" xmlns="http://www.w3.org/2000/svg" width={500} height={500} viewBox="-75 167 460 460">
     {!complete && <Anime easing="easeOutCubic"
@@ -91,5 +91,5 @@ export const MainGear: React.FC = () => {
                 xlinkHref={MainImage} transform={"matrix(0.7676 0 0 0.7676 -75.3 170)"} width="1000" height="667"/>
             </g>
         </svg>
-    </>
+    </div>
 }
