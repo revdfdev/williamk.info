@@ -13,26 +13,6 @@ import './MainGear.css';
  */
 export const MainGear: React.FC = () => {
     const [complete, setComplete] = useState<boolean>(false);
-    const [resizing, setResizing] = useState<boolean>(false);
-
-    /**
-     * Set a listener for resizing because it lags if spinning and resizing page.
-     */
-    useEffect(() => {
-        let func = () => {
-            if (!resizing) {
-                setTimeout(() => {
-                    setResizing(false);
-                }, 500);
-            }
-            setResizing(true);
-        }
-        window.addEventListener("resize", func);
-
-        return () => {
-            window.removeEventListener("resize", func);
-        }
-    }, [])
 
     return <div>
         <svg className="main-gear-svg" 
@@ -89,7 +69,7 @@ export const MainGear: React.FC = () => {
         </Anime>}
         </svg>
         <svg
-            className={`${complete && !resizing ? "spin" : ""} main-gear-svg`}
+            className={`${complete ? "spin" : ""} main-gear-svg`}
             version="1.1" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="-75 167 460 460">
@@ -115,7 +95,7 @@ export const MainGear: React.FC = () => {
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="-75 167 460 460"> 
             <defs>
-                <circle cx="155.4" cy="397" r="164.928" id="clip-circle" />
+                <circle cx="155.1" cy="397.2" r="165" id="clip-circle" />
             </defs>
             <clipPath id="clip-circle-path">
                 <use xlinkHref="#clip-circle" style={{overflow: "visible"}} />

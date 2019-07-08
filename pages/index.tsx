@@ -11,7 +11,9 @@ import { MainGear } from '../components/MainGear/MainGear';
  */
 const IndexPage: React.FC = () => {
     return <>
-        <MainGear />
+        <div className="main-gear-container">
+            <MainGear />
+        </div>
     </>
 }
 

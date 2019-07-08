@@ -1,25 +1,21 @@
-.social-container {
-    color: #39275B;
-    margin-bottom: 10px;
+.main-gear-container {
+    margin-top: 10vh;
 }
 
-.social-container a {
-    text-decoration: none !important;
+@media (max-width: 768px) {
+    .main-gear-container {
+        margin-left: 5vw;
+    }
 }
 
-.social-title {
-    font-size: 125%;
-    margin-left: 10px;
+@media (min-width: 768px) {
+    .main-gear-container {
+        margin-left: 15vw;
+    }
 }
 
-.officers {
-    padding: 0px;
-}
-
-.officer-name {
-    margin-bottom: 0px !important;
-}
-
-.officer-heading {
-    margin-bottom: 5px;
+@media (min-width: 1100px) {
+    .main-gear-container {
+        margin-left: calc(45vw - 300px);
+    }
 }
