@@ -6,7 +6,7 @@ import { HelmetContent } from './HelmetContent/HelmetContent';
 
 type PageProps = {
     children: React.ReactNode,
-    pathname: string
+    pathname?: string
 }
 
 /**
@@ -17,7 +17,7 @@ type PageProps = {
  *      William Kwok
  *      June 7, 2019
  */
-export const Page: React.FC<PageProps> = ({ children, pathname }) => {
+export const Page: React.FC<PageProps> = ({ children }) => {
     /**
      * On component mount, load the fonts. 
      */

@@ -28,15 +28,15 @@
 
 .st1 {
     fill: none;
-    stroke: #005696;
+    stroke: var(--theme-color);
     stroke-width: 1;
     stroke-linecap: round;
     stroke-miterlimit: 10;
 }
 
 .st2 {
-    fill: #005696;
-    stroke: #005696;
+    fill: var(--theme-color);
+    stroke: var(--theme-color);
     stroke-width: 1;
     stroke-linecap: round;
     stroke-miterlimit: 10;
@@ -51,7 +51,7 @@
 }
 
 .gear-image-image {
-    transition: opacity 0.5s;
+    transition: opacity 1s;
 }
 
 .gear-image-hidden {
@@ -66,7 +66,7 @@
     -webkit-animation: spin 15s linear infinite;
     -moz-animation: spin 15s linear infinite;
     animation: spin 15s linear infinite;
-    stroke: #005696;
+    stroke: var(--theme-color);
 }
 
 @-moz-keyframes spin {

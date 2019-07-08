@@ -20,7 +20,7 @@ export const MainGear: React.FC = () => {
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="-75 167 460 460">
         {!complete && <Anime easing="easeOutCubic"
-            duration={1000}
+            duration={2000}
             loop={false}
             delay={(_, index) => {
                 return index ? index * 200 : 0}}

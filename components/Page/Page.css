@@ -1,3 +1,7 @@
+:root {
+    --theme-color: #005696;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -12,10 +16,14 @@ body {
 }
 
 a, a:hover, a:active, a:focus, a:visited {
-    color: #005696 !important;
+    color: var(--theme-color) !important;
     text-decoration: none !important;
 }
 
 .spacer {
     margin-bottom: 70px;
+}
+
+.em-color {
+    color: var(--theme-color) !important;
 }

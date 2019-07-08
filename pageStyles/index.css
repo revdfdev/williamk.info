@@ -5,17 +5,20 @@
 @media (max-width: 768px) {
     .main-gear-container {
         margin-left: 5vw;
+        height: 80vw;
     }
 }
 
 @media (min-width: 768px) {
     .main-gear-container {
         margin-left: 15vw;
+        height: 60vw;
     }
 }
 
 @media (min-width: 1100px) {
     .main-gear-container {
         margin-left: calc(45vw - 300px);
+        height: 600px;
     }
 }

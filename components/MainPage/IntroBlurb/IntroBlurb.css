@@ -1,0 +1,15 @@
+h1.intro-blurb {
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+p.intro-blurb {
+    font-size: 1.2rem !important;
+    text-align: center;
+    margin-bottom: 5px !important;
+}
+
+.intro-blurb-container {
+    margin-top: 10px;
+}
