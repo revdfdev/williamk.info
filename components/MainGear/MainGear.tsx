@@ -1,7 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import Anime from 'react-anime';
 import MainImage from '../../components/_assets/Images/Main/Main.jpg';
+import OnRock from '../../components/_assets/Images/Main/OnRock.jpg';
 import './MainGear.css';
+
+type MainImagePreset = {
+    image: string,
+    width: number,
+    height: number,
+    XPOS: number,
+    YPOS: number,
+    ZOOM: number
+}
+
+type MainImageMetadata = {
+    [idx: string]: MainImagePreset
+}
+
+const MAIN_IMAGE_METADATA: MainImageMetadata = {
+    FRONT_MONITOR: {
+        image: MainImage,
+        width: 1500,
+        height: 1000,
+        XPOS: -75.3,
+        YPOS: 170,
+        ZOOM: 0.777
+    },
+    ON_ROCK:  {
+        image: OnRock,
+        width: 1536,
+        height: 2048,
+        XPOS: -100,
+        YPOS: -10,
+        ZOOM: 0.333
+    }
+}
 
 /**
  * MainGear is the gear that is on the front of the main page. It is an animated gear that is drawn
@@ -102,9 +135,12 @@ export const MainGear: React.FC = () => {
             </clipPath>
             <g className="gear-image">
                 <image className={`gear-image-image ${complete ? "gear-image-show" : "gear-image-hidden"}`}
-                    xlinkHref={MainImage} transform={"matrix(0.555 0 0 0.555 -75.3 170)"} 
-                    width="1500" 
-                    height="1000"/>
+                    xlinkHref={MainImage} transform={`matrix(
+                        ${MAIN_IMAGE_METADATA.ON_ROCK.ZOOM} 0 0 ${MAIN_IMAGE_METADATA.ON_ROCK.ZOOM}
+                        ${MAIN_IMAGE_METADATA.ON_ROCK.XPOS} 
+                        ${MAIN_IMAGE_METADATA.ON_ROCK.YPOS})`} 
+                    width={MAIN_IMAGE_METADATA.ON_ROCK.width} 
+                    height={MAIN_IMAGE_METADATA.ON_ROCK.height}/>
             </g>
         </svg>
     </div>

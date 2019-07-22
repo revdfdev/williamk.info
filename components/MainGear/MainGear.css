@@ -12,14 +12,14 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1100px) {
+@media (min-width: 768px) and (max-width: 1000px) {
     .main-gear-svg {
         width: 60vw;
         height: 60vw;
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
     .main-gear-svg {
         width: 600px;
         height: 600px;

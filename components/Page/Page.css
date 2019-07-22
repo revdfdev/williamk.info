@@ -1,12 +1,13 @@
 :root {
     --theme-color: #005696;
+    --bg-color: #eeeeee;
 }
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: "Quicksand", sans-serif !important;
-    background-color: #eeeeee !important;
+    background-color: var(--bg-color) !important;
     overflow-x: hidden;
 }
 
