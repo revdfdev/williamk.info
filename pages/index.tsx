@@ -21,9 +21,7 @@ const IndexPage: React.FC = () => {
             <SocialLinks />
             <div className="main-see-below">See some of my work below!</div>
         </div>
-        <div>
 
-        </div>
     </>
 }
 

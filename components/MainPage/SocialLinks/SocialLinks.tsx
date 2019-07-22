@@ -14,17 +14,17 @@ export type SocialLinkType = {
 const LINKS: SocialLinkType[] = [
     {
         icon: faGithub,
-        text: "kwokwilliam",
+        text: "Github",
         link: "https://github.com/kwokwilliam"
     },
     {
         icon: faLinkedin,
-        text: "william-w-kwok",
+        text: "LinkedIn",
         link: "https://linkedin.com/in/william-w-kwok/"
     },
     {
         icon: faEnvelope,
-        text: "wkwok1998@gmail.com",
+        text: "Email",
         link: "mailto:wkwok1998@gmail.com"
     },
     {

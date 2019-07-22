@@ -12,13 +12,13 @@ export const SocialLink: React.FC<SocialLinkProps> = ({ link }) => {
     return <div key={link.text} className="social-item">
         {link.internalLink &&
             <Link href={link.link}>
-                <a>
+                <a title={link.text}>
                     <FontAwesomeIcon icon={link.icon} size="2x" />
                 </a>
             </Link>
         }
         {!link.internalLink &&
-            <a href={link.link} className="social-flex">
+            <a href={link.link} className="social-flex" title={link.text}>
                 <FontAwesomeIcon icon={link.icon} size="2x" />
             </a>
         }
