@@ -24,7 +24,7 @@ const MAIN_IMAGE_METADATA: MainImageMetadata = {
         height: 1000,
         XPOS: -75.3,
         YPOS: 170,
-        ZOOM: 0.777
+        ZOOM: 0.555
     },
     ON_ROCK:  {
         image: OnRock,
@@ -42,10 +42,15 @@ const MAIN_IMAGE_METADATA: MainImageMetadata = {
  * 
  * Last Modified
  *      William Kwok
- *      July 8, 2019
+ *      July 21, 2019
  */
 export const MainGear: React.FC = () => {
     const [complete, setComplete] = useState<boolean>(false);
+
+    const imgMetadataKeys = Object.keys(MAIN_IMAGE_METADATA);
+    const metaDataRandom = MAIN_IMAGE_METADATA[imgMetadataKeys[
+        Math.floor(imgMetadataKeys.length * Math.random())
+    ]];
 
     return <div>
         <svg className="main-gear-svg" 
@@ -135,12 +140,12 @@ export const MainGear: React.FC = () => {
             </clipPath>
             <g className="gear-image">
                 <image className={`gear-image-image ${complete ? "gear-image-show" : "gear-image-hidden"}`}
-                    xlinkHref={MainImage} transform={`matrix(
-                        ${MAIN_IMAGE_METADATA.ON_ROCK.ZOOM} 0 0 ${MAIN_IMAGE_METADATA.ON_ROCK.ZOOM}
-                        ${MAIN_IMAGE_METADATA.ON_ROCK.XPOS} 
-                        ${MAIN_IMAGE_METADATA.ON_ROCK.YPOS})`} 
-                    width={MAIN_IMAGE_METADATA.ON_ROCK.width} 
-                    height={MAIN_IMAGE_METADATA.ON_ROCK.height}/>
+                    xlinkHref={metaDataRandom.image} transform={`matrix(
+                        ${metaDataRandom.ZOOM} 0 0 ${metaDataRandom.ZOOM}
+                        ${metaDataRandom.XPOS} 
+                        ${metaDataRandom.YPOS})`} 
+                    width={metaDataRandom.width} 
+                    height={metaDataRandom.height}/>
             </g>
         </svg>
     </div>
