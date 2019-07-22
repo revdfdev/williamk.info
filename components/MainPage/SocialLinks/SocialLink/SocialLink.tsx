@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SocialLink.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SocialLinkType } from '../SocialLinks';

@@ -1,8 +1,7 @@
 import React from 'react';
 import './SocialLinks.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
-import { faFileAlt, faEnvelope, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SocialLink } from './SocialLink/SocialLink';
 
 export type SocialLinkType = {
