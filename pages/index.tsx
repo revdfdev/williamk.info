@@ -2,6 +2,7 @@ import React from 'react';
 import "../pageStyles/index.css";
 import { MainGear } from '../components/MainGear/MainGear';
 import { IntroBlurb } from '../components/MainPage/IntroBlurb/IntroBlurb';
+import { SocialLinks } from '../components/MainPage/SocialLinks/SocialLinks';
 
 /**
  * IndexPage is the home page shown at route "/"
@@ -17,9 +18,11 @@ const IndexPage: React.FC = () => {
                 <MainGear />
             </div>
             <IntroBlurb />
+            <SocialLinks />
+            <div className="main-see-below">See some of my work below!</div>
         </div>
         <div>
-            test
+
         </div>
     </>
 }

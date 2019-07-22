@@ -12,6 +12,5 @@ export const IntroBlurb: React.FC = () => {
         <p>I TA for <a href="https://drstearns.github.io/tutorials/">Server Side Development</a>,
         program websites for <a href="http://2018.igem.org/Team:Washington">Washington iGEM</a>,
         and am the director of IT for <a href="https://iuga.info">IUGA</a>.</p>
-        <p>See some of my work below!</p>
     </div>
 }

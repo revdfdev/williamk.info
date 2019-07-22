@@ -31,7 +31,7 @@ const MAIN_IMAGE_METADATA: MainImageMetadata = {
         width: 1536,
         height: 2048,
         XPOS: -100,
-        YPOS: -10,
+        YPOS: 20,
         ZOOM: 0.333
     }
 }

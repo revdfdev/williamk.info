@@ -1,0 +1,9 @@
+.social-item {
+    color: var(--theme-color);
+    margin: 5px;
+}
+
+.social-flex {
+    display: flex;
+    align-items: center;
+}
