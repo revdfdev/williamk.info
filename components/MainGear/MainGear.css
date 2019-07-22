@@ -1,8 +1,7 @@
 .main-gear-svg {
-    /* display: inline; */
     display: block;
     margin: auto;
-    position: fixed;
+    position: absolute;
 }
 
 @media (max-width: 768px) {

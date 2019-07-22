@@ -8,17 +8,20 @@ import { IntroBlurb } from '../components/MainPage/IntroBlurb/IntroBlurb';
  * 
  * Last Modified
  *      William Kwok
- *      June 7, 2019
+ *      July 21, 2019
  */
 const IndexPage: React.FC = () => {
     return <>
-        <div className="main-gear-container">
-            <MainGear />
+        <div className="main-intro">
+            <div className="main-gear-container">
+                <MainGear />
+            </div>
+            <IntroBlurb />
         </div>
-        <IntroBlurb />
+        <div>
+            test
+        </div>
     </>
 }
-
-
 
 export default IndexPage;

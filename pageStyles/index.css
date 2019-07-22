@@ -1,6 +1,11 @@
-.main-gear-container {
-    margin-top: 10vh;
+.main-intro {
+    min-height: 100vh;
+    padding-top: 7vh;
 }
+
+/* .main-gear-container {
+    margin-top: 7vh;
+} */
 
 @media (max-width: 768px) {
     .main-gear-container {
