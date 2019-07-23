@@ -4,6 +4,7 @@ import IugaLogo from '../../_assets/Images/Experience/IugaLogo.png';
 import iGEMLogo from '../../_assets/Images/Experience/WashingtonIGEMLogo.png';
 import iSchoolLogo from '../../_assets/Images/Experience/iSchoolLogo.png';
 import UWLogo from '../../_assets/Images/Experience/UWLogo.jpg';
+import { SinglePosition } from './SinglePosition/SinglePosition';
 
 type ExperienceLink = {
     link: string,
@@ -11,7 +12,7 @@ type ExperienceLink = {
     internal?: boolean
 }
 
-type Experience = {
+export type Experience = {
     logo: string,
     company: string,
     location: string,
@@ -19,7 +20,8 @@ type Experience = {
     startDate: string
     endDate?: string,
     description?: string[],
-    links?: ExperienceLink[]
+    links?: ExperienceLink[],
+    key: string
 }
 
 const EXPERIENCES: Experience[] = [
@@ -35,7 +37,8 @@ const EXPERIENCES: Experience[] = [
                 link: "https://www.qualtrics.com/",
                 title: "Qualtrics Homepage"
             }
-        ]
+        ],
+        key: "qualtricsinternship"
     },
     {
         logo: IugaLogo,
@@ -55,7 +58,8 @@ const EXPERIENCES: Experience[] = [
                 link: "https://iuga.info",
                 title: "IUGA Homepage"
             }
-        ]
+        ],
+        key: "iuga"
     },
     {
         logo: iGEMLogo,
@@ -79,7 +83,8 @@ const EXPERIENCES: Experience[] = [
                 link: "https://2019.igem.org/Team:Washington",
                 title: "2019 Wiki"
             }
-        ]
+        ],
+        key: "igem"
     },
     {
         logo: iSchoolLogo,
@@ -97,7 +102,8 @@ const EXPERIENCES: Experience[] = [
             "I am also the Teaching Assistant for INFO 441, Server Side Development. One version of this course covers the basics of Django, the Django Rest Framework, deploying on Microsoft Azure, and how it fits together in the context of web development. We also cover bonus topics such as Websockets using NodeJS and security tips. Me and the other TA are in charge of creating lab section slides, creating the weekly assignments, the automated graders for those assignments, and grading the assignments themselves.",
 
             "Another version of the course covers Golang, Docker, Microservice Architecture, Message Queues, Websockets, and implementing Authentication from scratch."
-        ]
+        ],
+        key: "ischooltatutor"
     },
     {
         logo: iSchoolLogo,
@@ -130,7 +136,8 @@ const EXPERIENCES: Experience[] = [
                 link: "https://codeitz.com/",
                 title: "CodeItz: An Intelligent Tutoring System"
             }
-        ]
+        ],
+        key: "cac"
     },
     {
         logo: UWLogo,
@@ -143,12 +150,22 @@ const EXPERIENCES: Experience[] = [
             "At the Biomedical Image Computing Group at the University of Washington Department of Pediatrics and Bioengineering, I aid the development of new mathematical and computational algorithms to manipulate and analyze biomedical image data.",
 
             "This lab position provided me exposure to machine learning libraries such as TinyCNN, MXNet, and Tensorflow."
-        ]
+        ],
+        links: [
+            {
+                link: "http://depts.washington.edu/bicg/home/",
+                title: "BICG Website"
+            }
+        ],
+        key: "bicg"
     }
 ]
 
 export const Experience: React.FC = () => {
     return <>
-
+        <h1 className="centered margin-bottom-15px">Experience</h1>
+        {EXPERIENCES.map(experience => {
+            return <SinglePosition experience={experience} key={experience.key} />
+        })}
     </>
 }

@@ -28,3 +28,11 @@ a, a:hover, a:active, a:focus, a:visited {
 .em-color {
     color: var(--theme-color) !important;
 }
+
+.centered {
+    text-align: center;
+}
+
+.margin-bottom-15px {
+    margin-bottom: 15px;
+}
