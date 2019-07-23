@@ -3,6 +3,7 @@ import QualtricsLogo from '../../_assets/Images/Experience/QualtricsLogo.png';
 import IugaLogo from '../../_assets/Images/Experience/IugaLogo.png';
 import iGEMLogo from '../../_assets/Images/Experience/WashingtonIGEMLogo.png';
 import iSchoolLogo from '../../_assets/Images/Experience/iSchoolLogo.png';
+import UWLogo from '../../_assets/Images/Experience/UWLogo.jpg';
 
 type ExperienceLink = {
     link: string,
@@ -130,8 +131,20 @@ const EXPERIENCES: Experience[] = [
                 title: "CodeItz: An Intelligent Tutoring System"
             }
         ]
-    }
+    },
+    {
+        logo: UWLogo,
+        company: "Biomedical Image Computing Group",
+        location: "Seattle, Washington",
+        title: "Undergraduate Research Assistant",
+        startDate: "January 2018",
+        endDate: "June 2018",
+        description: [
+            "At the Biomedical Image Computing Group at the University of Washington Department of Pediatrics and Bioengineering, I aid the development of new mathematical and computational algorithms to manipulate and analyze biomedical image data.",
 
+            "This lab position provided me exposure to machine learning libraries such as TinyCNN, MXNet, and Tensorflow."
+        ]
+    }
 ]
 
 export const Experience: React.FC = () => {
