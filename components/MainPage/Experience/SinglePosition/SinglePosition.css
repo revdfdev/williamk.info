@@ -1,3 +1,7 @@
+.single-position {
+    margin-bottom: 10px;
+}
+
 .single-position div.collapse:not(.show) {
     /* display: block; */
     /* height = lineheight * no of lines to display */
@@ -13,4 +17,45 @@
 .single-position div.collapsing {
     height: 1.5em;
     min-height: 1.5em;
+}
+
+.single-position-button {
+    margin-top: 10px;
+}
+
+.single-position-title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.single-position-subtitle {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.single-position-subtitle-date {
+    font-size: 1em;
+    margin-top: -0.2rem;
+}
+
+.single-position-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.single-position-img-and-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-position-img img {
+    width: 125px;
+    height: 125px;
+    padding: 0.6rem;
+}
+
+.single-position-body {
+    padding: 0.6rem;
+    padding-left: 0px;
 }
