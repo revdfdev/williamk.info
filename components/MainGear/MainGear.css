@@ -50,7 +50,7 @@
 }
 
 .gear-image-image {
-    transition: opacity 1s;
+    transition: opacity 1s ease-in-out;
 }
 
 .gear-image-hidden {

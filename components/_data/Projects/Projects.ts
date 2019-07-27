@@ -2,7 +2,7 @@ import questionQueue from '../../_assets/Images/Projects/questionQueue.png';
 import iugaSite from '../../_assets/Images/Projects/iugaSite.png';
 import igemSite from '../../_assets/Images/Projects/igemsite.png';
 import tutorq from '../../_assets/Images/Projects/tutorq.png';
-import findC from '../../_assets/Images/Projects/findc.png';
+import findC from '../../_assets/Images/Projects/findc.jpg';
 import codeitz from '../../_assets/Images/Projects/codeitz.jpg';
 import programmingstrategies from '../../_assets/Images/Projects/programmingstrategies.png';
 import reactresumepdf from '../../_assets/Images/Projects/reactresumepdf.png';
@@ -12,9 +12,10 @@ import safeCycleJS from '../../_assets/Images/Projects/safecycleJS.png';
 import safeCycleR from '../../_assets/Images/Projects/safecycleR.png';
 import walker from '../../_assets/Images/Projects/walker.png';
 import planet from '../../_assets/Images/Projects/planet.png';
-import teammanager from '../../_assets/Imagess/Projects/teammanager.png';
+import teammanager from '../../_assets/Images/Projects/teammanager.png';
 import violacein from '../../_assets/Images/Projects/igem2017.jpg';
 import pr from '../../_assets/Images/Projects/pr.png';
+import fearfilter from '../../_assets/Images/Projects/fearfilter.png';
 
 export type ProjectLink = {
     link: string,
@@ -25,7 +26,7 @@ export type ProjectLink = {
 export type ProjectKey = string;
 
 export type Project = {
-    image?: string,
+    image: string,
     links?: ProjectLink[],
     title: string,
     description?: string[],
@@ -296,7 +297,7 @@ export const PROJECTS: { [idx: string]: Project } = {
                 link: "https://github.com/ferily7/info343-final-project"
             }
         ],
-        blurb: "An simple trip planner",
+        blurb: "A simple trip planner",
         tools: ['Firebase', "JavaScript", "React Router", "MaterialUI"],
         seeAlso: [],
         startDate: "February 2018 - March 2018",
@@ -418,6 +419,7 @@ export const PROJECTS: { [idx: string]: Project } = {
     },
     'fearfilter': {
         title: "Fear Filter",
+        image: fearfilter,
         description: [
             `Fear Filter is a Google Chrome extension that checks all images displayed on a website and filters it for a user's specified phobia. It utilizes Microsoft Azure Computer Vision API v1.0 using tags to determine if it must be filtered or not. I worked on the JavaScript functionality for ensuring the correct images get blocked out.`
         ],

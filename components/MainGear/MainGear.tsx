@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Anime from 'react-anime';
 import MainImage from '../../components/_assets/Images/Main/Main.jpg';
 import OnRock from '../../components/_assets/Images/Main/OnRock.jpg';

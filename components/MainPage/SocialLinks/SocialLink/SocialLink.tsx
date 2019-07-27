@@ -17,13 +17,13 @@ export const SocialLink: React.FC<SocialLinkProps> = ({ link }) => {
             onMouseLeave={() => setHover(false)}>
             {link.internalLink &&
                 <Link href={link.link}>
-                    <a title={link.text}>
+                    <a>
                         <FontAwesomeIcon icon={link.icon} size="2x" />
                     </a>
                 </Link>
             }
             {!link.internalLink &&
-                <a href={link.link} className="social-flex" title={link.text}>
+                <a href={link.link} className="social-flex">
                     <FontAwesomeIcon icon={link.icon} size="2x" />
                 </a>
             }

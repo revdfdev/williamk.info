@@ -4,6 +4,7 @@ import { MainGear } from '../components/MainGear/MainGear';
 import { IntroBlurb } from '../components/MainPage/IntroBlurb/IntroBlurb';
 import { SocialLinks } from '../components/MainPage/SocialLinks/SocialLinks';
 import { Experience } from '../components/MainPage/Experience/Experience';
+import { Projects } from '../components/MainPage/Projects/Projects';
 
 /**
  * IndexPage is the home page shown at route "/"
@@ -23,7 +24,7 @@ const IndexPage: React.FC = () => {
             <div className="main-see-below">See some of my work below!</div>
         </div>
         <Experience />
-
+        <Projects />
     </>
 }
 

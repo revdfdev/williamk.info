@@ -1,6 +1,7 @@
 :root {
     --theme-color: #005696;
     --bg-color: #eeeeee;
+    --theme-color-opaque: rgba(0, 86, 150, 0.8);
 }
 
 body {
