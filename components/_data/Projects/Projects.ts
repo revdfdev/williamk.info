@@ -14,6 +14,7 @@ import walker from '../../_assets/Images/Projects/walker.png';
 import planet from '../../_assets/Images/Projects/planet.png';
 import teammanager from '../../_assets/Imagess/Projects/teammanager.png';
 import violacein from '../../_assets/Images/Projects/igem2017.jpg';
+import pr from '../../_assets/Images/Projects/pr.png';
 
 export type ProjectLink = {
     link: string,
@@ -24,7 +25,7 @@ export type ProjectLink = {
 export type ProjectKey = string;
 
 export type Project = {
-    image: string,
+    image?: string,
     links?: ProjectLink[],
     title: string,
     description?: string[],
@@ -42,7 +43,18 @@ export const PROJECT_LIST: ProjectKey[] = [
     'tutorq',
     'findc',
     'codeitz',
-    'programmingstrategies'
+    'programmingstrategies',
+    'reactresumepdf',
+    '2018scouting',
+    'planetplanner',
+    'teammanager',
+    'safecyclejs',
+    'differentialflow',
+    'safecycler',
+    'vivalaviolacein',
+    'fearfilter',
+    'physerapy',
+    'walkercapstone'
 ]
 
 export const PROJECTS: { [idx: string]: Project } = {
@@ -384,15 +396,10 @@ export const PROJECTS: { [idx: string]: Project } = {
     },
     'vivalaviolacein': {
         title: "Viva la Violacein",
-        image: igem2017,
-        description: [`For the hardware and software side of the Washington iGEM Project, we prototyped 
-        an affordable, modular bioreactor dubbed the "Chromastat" that utilizes a closed-loop feedback 
-        control system to control and optimize the production of a desired product. It allows the 
-        reduction of time and effort needed to maintain cultures through automated, real-time 
-        metabolite analysis.`,
-            `I designed a modular 3D printable, open source syringe pump that was cost effective compared 
-        to industrial solutions. It was accurate to the ±0.01 mL for any given dispense action using 
-        a standard 3 mL syringe.`,
+        image: violacein,
+        description: [
+            `For the hardware and software side of the Washington iGEM Project, we prototyped an affordable, modular bioreactor dubbed the "Chromastat" that utilizes a closed-loop feedback control system to control and optimize the production of a desired product. It allows the reduction of time and effort needed to maintain cultures through automated, real-time metabolite analysis.`,
+            `I designed a modular 3D printable, open source syringe pump that was cost effective compared to industrial solutions. It was accurate to the ±0.01 mL for any given dispense action using a standard 3 mL syringe.`,
             `Along with that, I designed and programmed the 2017 Team Washington website from the ground up.`],
         links: [
             {
@@ -404,64 +411,59 @@ export const PROJECTS: { [idx: string]: Project } = {
                 link: "https://github.com/uwigem/uwigem2017"
             }
         ],
+        blurb: "An affordable, modular bioreactor",
         tools: ["Java", "HTML", "CSS", "JavaScript", "Fusion 360", "Bootstrap"],
-        seeAlso: [],
-        startDate: "January 2017 - November 2017",
+        startDate: "January 2017",
+        endDate: "November 2017"
     },
-{
-    title: "Fear Filter",
-        image: "",
-            description: `Fear Filter is a Google Chrome extension that checks all images displayed on a 
-        website and filters it for a user's specified phobia. It utilizes Microsoft Azure Computer 
-        Vision API v1.0 using tags to determine if it must be filtered or not. I worked on the 
-        JavaScript functionality for ensuring the correct images get blocked out.`,
-                links: [
-                    {
-                        title: "Project",
-                        link: "https://www.phobiacensor.tech/"
-                    },
-                    {
-                        title: "Github",
-                        link: "https://github.com/Ryabn/DubhacksProject"
-                    }
-                ],
-                    tools: ["Azure Vision", "JavaScript", "jQuery"],
-                        seeAlso: [],
-                            startDate: "October 2017",
-},
-{
-    title: "Physerapy",
+    'fearfilter': {
+        title: "Fear Filter",
+        description: [
+            `Fear Filter is a Google Chrome extension that checks all images displayed on a website and filters it for a user's specified phobia. It utilizes Microsoft Azure Computer Vision API v1.0 using tags to determine if it must be filtered or not. I worked on the JavaScript functionality for ensuring the correct images get blocked out.`
+        ],
+        links: [
+            {
+                title: "Github",
+                link: "https://github.com/Ryabn/DubhacksProject"
+            }
+        ],
+        blurb: "A smart image blocking service",
+        tools: ["Azure Vision", "JavaScript", "jQuery"],
+        startDate: "October 2017",
+    },
+    'physerapy': {
+        title: "Physerapy",
         image: pr,
-            description: `Physerapy is a prototype physical therapy app that replaces the need for going 
-        into a therapist just to get a sheet of paper with exercises on it. My group introduced
-        proof of concept integration with encrypted medical records using APIs such as eCare. 
-        We also played with the idea of integration with external devices such as Xbox Kinect or 
-        Smartwatches.`,
-                links: [
-                    {
-                        title: "Project",
-                        link: "https://projects.invisionapp.com/share/UPBXZ9MC7"
-                    }
-                ],
-                    tools: ["InVision"],
-                        seeAlso: [],
-                            startDate: "April 2017 - May 2017",
-},
-{
-    title: "High School Capstone",
-        image: walkerImg,
-            description: `During my senior year of high school for a community service CAPSTONE class, 
-        the project I decided on was to manufacture a walker. The walker was designed in OnShape, 
-        machined from raw aluminum, and welded together. Assistive Technology Resource Center of 
-        Hawaii received the walker when it was completed.`,
-                links: [
-                    {
-                        title: "Project",
-                        link: "https://www.youtube.com/watch?v=DI9dS9Vm-T8"
-                    }
-                ],
-                    tools: ["OnShape", "Machine Shop"],
-                        seeAlso: [],
-                            startDate: "October 2015 - December 2015",
-},
+        description: [
+            `Physerapy is a prototype physical therapy app that replaces the need for going into a therapist just to get a sheet of paper with exercises on it. My group introduced proof of concept integration with encrypted medical records using APIs such as eCare. We also played with the idea of integration with external devices such as Xbox Kinect or Smartwatches.`,
+            `This project was an introduction to user centered design. I consider it a very simple idea project, but still taught me soft skills that I use to this day.`
+        ],
+        links: [
+            {
+                title: "Project",
+                link: "https://projects.invisionapp.com/share/UPBXZ9MC7"
+            }
+        ],
+        blurb: "A proof of concept physical therapy app",
+        tools: ["InVision"],
+        startDate: "April 2017 - May 2017",
+    },
+    'walkercapstone': {
+        title: "High School Capstone",
+        image: walker,
+        description: [
+            `During my senior year of high school for a community service CAPSTONE class, the project I decided on was to manufacture a walker. The walker was designed in OnShape, machined from raw aluminum, and welded together. Assistive Technology Resource Center of Hawaii received the walker when it was completed.`,
+            `I learned about planning a hardware project and executing it by a certain deadline.`
+        ],
+        blurb: 'A hardware project',
+        links: [
+            {
+                title: "Project",
+                link: "https://www.youtube.com/watch?v=DI9dS9Vm-T8"
+            }
+        ],
+        tools: ["Machine Shop", "OnShape"],
+        startDate: "October 2015",
+        endDate: "December 2015"
+    },
 }
