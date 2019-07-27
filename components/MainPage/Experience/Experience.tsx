@@ -68,6 +68,7 @@ const EXPERIENCES: Experience[] = [
         title: "Lead Front End Engineer",
         startDate: "February 2017",
         description: [
+            "iGEM is the International Genetically Engineered Machine competition. It is a synthetic biology competition held in Boston yearly.",
             "I am in charge of development of the team website (WIP) and iGEM Team Wiki Site (required for competition judging). The team website will use NextJS to produce static files hosted on github pages. The Team Wikis use React and TypeScript under the hood. We have implemented a content management system into the Team Wiki so anyone on our team can edit the website."
         ],
         links: [

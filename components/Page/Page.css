@@ -54,4 +54,5 @@ button.btn-tertiary {
 
 .card {
     border: 1px solid var(--theme-color) !important;
+    align-items: flex-start;
 }
