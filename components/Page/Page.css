@@ -51,3 +51,7 @@ button.btn-tertiary {
     margin-right: 10px;
     margin-top: 10px;
 }
+
+.card {
+    border: 1px solid var(--theme-color) !important;
+}

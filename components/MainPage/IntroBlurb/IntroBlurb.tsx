@@ -4,7 +4,7 @@ import './IntroBlurb.css';
 export const IntroBlurb: React.FC = () => {
     return <div className="intro-blurb-container">
         <h1 className="intro-blurb">Hi, I'm William Kwok</h1>
-        <p className="intro-blurb">I'm a full stack developer and fourth year student at the
+        <p className="intro-blurb">I'm a full stack developer and fourth year at the
             <a href="https://www.washington.edu/"> University of Washington Seattle</a> obtaining a B.S. in
             <a href="https://ischool.uw.edu/"> Informatics</a>.</p>
         <p className="intro-blurb">Currently, I am a Software Engineering Intern at
