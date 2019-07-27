@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Experience } from '../Experience';
-import { Collapse, Button, CardBody, Card, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Collapse, Button, CardBody, Card, CardTitle, CardSubtitle } from 'reactstrap';
 import './SinglePosition.css';
 
 type SinglePositionProps = {
@@ -22,7 +22,7 @@ export const SinglePosition: React.FC<SinglePositionProps> = ({ experience }) =>
                         <CardTitle className="single-position-title">{experience.title}</CardTitle>
                         <CardSubtitle className="single-position-subtitle">{experience.company}</CardSubtitle>
                         <CardSubtitle className="single-position-subtitle-date">{experience.startDate} - {experience.endDate ? experience.endDate : "Present"}</CardSubtitle>
-                        <CardText className="single-position-text">
+                        <div className="single-position-text">
                             <Collapse isOpen={isOpen}>
                                 {experience.description && experience.description.map(descriptionParagraph => {
                                     return <p key={descriptionParagraph}>{descriptionParagraph}</p>
@@ -38,7 +38,7 @@ export const SinglePosition: React.FC<SinglePositionProps> = ({ experience }) =>
                             }}>
                                 {!isOpen ? "Show more" : "Show less"}
                             </Button>
-                        </CardText>
+                        </div>
                     </CardBody>
                 </div>
             </div>
