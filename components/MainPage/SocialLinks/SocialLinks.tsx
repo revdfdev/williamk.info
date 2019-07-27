@@ -1,6 +1,6 @@
 import React from 'react';
 import './SocialLinks.css';
-import { faGithub, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, IconDefinition, faMediumM, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faFileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SocialLink } from './SocialLink/SocialLink';
 
@@ -32,13 +32,23 @@ const LINKS: SocialLinkType[] = [
         text: "Resume",
         link: "/Resume",
         internalLink: true
+    },
+    {
+        icon: faMediumM,
+        text: "Medium",
+        link: "https://medium.com/@wkwok16",
+    },
+    {
+        icon: faTwitter,
+        text: "Twitter",
+        link: "https://twitter.com/williamwkwok"
     }
 ];
 
 export const SocialLinks: React.FC = () => {
     return <div className="social-links">
         {LINKS.map(link => {
-            return <SocialLink link={link} />
+            return <SocialLink link={link} key={link.text} />
         })}
     </div>
 }

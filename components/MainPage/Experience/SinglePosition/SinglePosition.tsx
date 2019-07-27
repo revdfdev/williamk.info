@@ -27,8 +27,13 @@ export const SinglePosition: React.FC<SinglePositionProps> = ({ experience }) =>
                                 {experience.description && experience.description.map(descriptionParagraph => {
                                     return <p key={descriptionParagraph}>{descriptionParagraph}</p>
                                 })}
+                                <div>
+                                    {experience.links && experience.links.map(link => {
+                                        return <Button key={link.title} className="btn-tertiary"><a href={link.link}>{link.title}</a></Button>
+                                    })}
+                                </div>
                             </Collapse>
-                            <Button className=" single-position-button" onClick={() => {
+                            <Button className="single-position-button" onClick={() => {
                                 setIsOpen(!isOpen);
                             }}>
                                 {!isOpen ? "Show more" : "Show less"}
