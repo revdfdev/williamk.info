@@ -1,4 +1,5 @@
-import questionQueueImage from '../../_assets/Images/Projects/questionQueue.png';
+import questionQueue from '../../_assets/Images/Projects/questionQueue.png';
+import iugaSite from '../../_assets/Images/Projects/iugaSite.png';
 
 export type ProjectLink = {
     link: string,
@@ -40,7 +41,25 @@ export const PROJECTS: Project[] = [
     //     endDate: ""
     // }
     {
-        image: questionQueueImage,
+        image: iugaSite,
+        links: [
+            {
+                link: "https://iuga.info/",
+                title: "IUGA Website"
+            }
+        ],
+        title: "IUGA Website Remake",
+        description: [
+            `As the Director of IT in IUGA, the Informatics Undegraduate Association, I saw issues in the current website stack that made it unmaintainable. I decided to rewrite it from scratch and simplify the deployment process as much as possible for future Directors of IT. In order to achieve this, I ensured the code followed SOLID principles and had a one step deployment process.`,
+            `I learned how to set up TypeScript + NextJS and all the minute details to get it to work. I also learned how to set up the dockerfiles for all this to deploy in one command. I use the same process for my personal website.`
+        ],
+        key: "iugasite",
+        tools: ["React", "Docker", "NGINX", "NextJS", "TypeScript", "Express"],
+        startDate: "June 2019",
+        endDate: "August 2019"
+    },
+    {
+        image: questionQueue,
         links: [
             {
                 link: "https://kwokwilliam.github.io/questionqueue",
@@ -64,5 +83,6 @@ export const PROJECTS: Project[] = [
             hash: "tutorq"
         }],
         startDate: "March 2019",
-    }
+    },
+
 ]
