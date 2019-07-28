@@ -5,6 +5,7 @@ import { IntroBlurb } from '../components/MainPage/IntroBlurb/IntroBlurb';
 import { SocialLinks } from '../components/MainPage/SocialLinks/SocialLinks';
 import { Experience } from '../components/MainPage/Experience/Experience';
 import { Projects } from '../components/Projects/Projects';
+import Fade from 'react-reveal/Fade';
 
 /**
  * IndexPage is the home page shown at route "/"
@@ -19,9 +20,13 @@ const IndexPage: React.FC = () => {
             <div className="main-gear-container">
                 <MainGear />
             </div>
-            <IntroBlurb />
-            <SocialLinks />
-            <div className="main-see-below">See some of my work below!</div>
+            <Fade duration={1000}>
+                <div>
+                    <IntroBlurb />
+                    <SocialLinks />
+                    <div className="main-see-below">See some of my work below!</div>
+                </div>
+            </Fade>
         </div>
         <Experience />
         <Projects />

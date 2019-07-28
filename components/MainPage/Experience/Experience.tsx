@@ -5,6 +5,7 @@ import iGEMLogo from '../../_assets/Images/Experience/WashingtonIGEMLogo.png';
 import iSchoolLogo from '../../_assets/Images/Experience/iSchoolLogo.png';
 import UWLogo from '../../_assets/Images/Experience/UWLogo.jpg';
 import { SinglePosition } from './SinglePosition/SinglePosition';
+import Fade from 'react-reveal/Fade';
 
 type ExperienceLink = {
     link: string,
@@ -165,8 +166,10 @@ const EXPERIENCES: Experience[] = [
 export const Experience: React.FC = () => {
     return <>
         <h1 className="centered margin-bottom-15px">Experience</h1>
-        {EXPERIENCES.map(experience => {
-            return <SinglePosition experience={experience} key={experience.key} />
-        })}
+        <Fade duration={1000}>
+            {EXPERIENCES.map(experience => {
+                return <SinglePosition experience={experience} key={experience.key} />
+            })}
+        </Fade>
     </>
 }

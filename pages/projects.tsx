@@ -32,6 +32,29 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projectName }) => {
             </Link>
 
             <h1>{proj.title}</h1>
+            <h2>{proj.blurb}</h2>
+            <h3>{proj.startDate}{proj.endDate ? ` - ${proj.endDate}` : ""}</h3>
+            <div className="projects-image">
+                <img src={proj.image} alt={proj.title} />
+            </div>
+            <div>
+                {proj.description && proj.description.map(paragraph => {
+                    return <p>{paragraph}</p>
+                })}
+                {proj.tools && <p>
+                    Tools used: {proj.tools.join(", ")}
+                </p>}
+
+                {proj.seeAlso && <>
+                    See also:&nbsp;
+                {proj.seeAlso.map(seeAlsoItem => {
+                        return <Link href={`/projects/${seeAlsoItem.key}`}>
+                            <a>
+                                {seeAlsoItem.title}
+                            </a>
+                        </Link>
+                    })}</>}
+            </div>
         </>}
     </>
 }
