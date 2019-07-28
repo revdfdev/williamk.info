@@ -30,6 +30,7 @@ const IndexPage: React.FC = () => {
         </div>
         <Experience />
         <Projects />
+
     </>
 }
 

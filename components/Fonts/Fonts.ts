@@ -1,5 +1,6 @@
 // @ts-ignore
 import FontFaceObserver from 'fontfaceobserver';
+import { useState, useEffect } from 'react';
 
 /**
  * Fonts will use the FontFaceObserver library to load the fonts in dynamically to the page. This 
@@ -11,14 +12,22 @@ import FontFaceObserver from 'fontfaceobserver';
  *      William Kwok
  *      June 5, 2019
  */
-export const Fonts = async () => {
-    const link = document.createElement("link");
-    link.href = "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700";
-    link.rel = "stylesheet";
+export const useFonts = () => {
+    const [loaded, setLoaded] = useState<boolean>(false);
 
-    document.head.appendChild(link);
+    useEffect(() => {
+        const link = document.createElement("link");
+        link.href = "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700";
+        link.rel = "stylesheet";
 
-    const quicksand = new FontFaceObserver("Quicksand");
-    await quicksand.load();
-    document.documentElement.classList.add("quicksand");
+        document.head.appendChild(link);
+
+        const quicksand = new FontFaceObserver("Quicksand");
+        quicksand.load().then(() => {
+            setLoaded(true);
+        })
+        document.documentElement.classList.add("quicksand");
+    }, [setLoaded]);
+
+    return loaded;
 }

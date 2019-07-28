@@ -39,7 +39,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projectName }) => {
             </div>
             <div>
                 {proj.description && proj.description.map(paragraph => {
-                    return <p>{paragraph}</p>
+                    return <p key={paragraph}>{paragraph}</p>
                 })}
                 {proj.tools && <p>
                     Tools used: {proj.tools.join(", ")}
@@ -48,7 +48,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projectName }) => {
                 {proj.seeAlso && <>
                     See also:&nbsp;
                 {proj.seeAlso.map(seeAlsoItem => {
-                        return <Link href={`/projects/${seeAlsoItem.key}`}>
+                        return <Link key={seeAlsoItem.key} href={`/projects/${seeAlsoItem.key}`}>
                             <a>
                                 {seeAlsoItem.title}
                             </a>

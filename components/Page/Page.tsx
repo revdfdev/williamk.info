@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { Fonts } from '../Fonts/Fonts';
+import React from 'react';
+import { useFonts } from '../Fonts/Fonts';
 import './Page.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HelmetContent } from './HelmetContent/HelmetContent';
-import { Wavbar } from '../Wavbar/Wavbar';
+import { Wavbar } from './Wavbar/Wavbar';
 
 type PageProps = {
     children: React.ReactNode,
@@ -19,18 +19,16 @@ type PageProps = {
  *      June 7, 2019
  */
 export const Page: React.FC<PageProps> = ({ children, pathname }) => {
-    /**
-     * On component mount, load the fonts. 
-     */
-    useEffect(() => {
-        Fonts();
-    }, []);
-
+    const loaded = useFonts();
     return <>
         <HelmetContent />
-        <Wavbar pathname={pathname} />
-        <div className="page-content">
-            {children}
-        </div>
+        {loaded &&
+            <>
+                <Wavbar pathname={pathname} />
+                <div className="page-content">
+                    {children}
+                </div>
+            </>
+        }
     </>
 }
