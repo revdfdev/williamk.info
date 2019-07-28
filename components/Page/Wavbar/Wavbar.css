@@ -10,3 +10,7 @@
 .wavbar, .wavbar-collapse, .wavbar nav {
     background-color: var(--theme-color);
 }
+
+.wavbar .nav-item {
+    margin-left: 10px;
+}

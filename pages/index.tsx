@@ -6,6 +6,9 @@ import { SocialLinks } from '../components/MainPage/SocialLinks/SocialLinks';
 import { Experience } from '../components/MainPage/Experience/Experience';
 import { Projects } from '../components/Projects/Projects';
 import Fade from 'react-reveal/Fade';
+import { Skills } from '../components/MainPage/Skills/Skills';
+// @ts-ignore
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 /**
  * IndexPage is the home page shown at route "/"
@@ -28,9 +31,21 @@ const IndexPage: React.FC = () => {
                 </div>
             </Fade>
         </div>
-        <Experience />
-        <Projects />
 
+        <ScrollableAnchor id="experience">
+            <div>
+                <Experience />
+            </div>
+        </ScrollableAnchor>
+        <div className="spacer"></div>
+
+        <ScrollableAnchor id="projects">
+            <div>
+                <Projects />
+            </div>
+        </ScrollableAnchor>
+        <div className="spacer"></div>
+        <Skills />
     </>
 }
 

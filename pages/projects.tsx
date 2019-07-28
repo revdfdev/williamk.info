@@ -14,6 +14,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projectName }) => {
     return <>
         {!proj && <>
             <Projects />
+            <div className="spacer"></div>
         </>}
         {proj && <>
             <Link href="/">
