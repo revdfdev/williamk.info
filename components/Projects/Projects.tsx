@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROJECTS, PROJECT_LIST } from '../../_data/Projects/Projects';
+import { PROJECTS, PROJECT_LIST } from '../_data/Projects/Projects';
 import { SingleProject } from './SingleProject/SingleProject';
 
 export const Projects: React.FC = () => {

@@ -22,6 +22,10 @@ app.prepare()
     .then(() => {
         const server = express();
 
+        server.get('/projects/:projectName', (req: Request, res: Response) => {
+            return app.render(req, res, '/projects', { projectName: req.params.projectName || "" });
+        })
+
         server.get('*', (req: Request, res: Response) => {
             return handle(req, res)
         })

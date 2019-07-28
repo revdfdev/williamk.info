@@ -40,7 +40,7 @@ class CustomApp extends App<RouterProps> {
         // If the year query parameter exists, you can access it. Otherwise it is undefined.
         return <Container>
             <Page pathname={router.pathname}>
-                <Component {...pageProps} />
+                <Component {...pageProps} project={router && router.query && router.query.project} />
             </Page>
         </Container>
     }

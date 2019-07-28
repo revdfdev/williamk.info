@@ -24,6 +24,9 @@ const handle = app.getRequestHandler();
 app.prepare()
     .then(() => {
     const server = express_1.default();
+    server.get('/projects/:projectName', (req, res) => {
+        return app.render(req, res, '/projects', { projectName: req.params.projectName || "" });
+    });
     server.get('*', (req, res) => {
         return handle(req, res);
     });

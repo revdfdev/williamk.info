@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Project } from '../../../_data/Projects/Projects';
-import { Collapse, Button, CardBody, Card, CardTitle, CardSubtitle } from 'reactstrap';
+import { Project } from '../../_data/Projects/Projects';
+import { Card, CardTitle, CardSubtitle } from 'reactstrap';
 import Link from 'next/link';
 import './SingleProject.css';
 
