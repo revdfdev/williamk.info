@@ -3,7 +3,7 @@ import { Fonts } from '../Fonts/Fonts';
 import './Page.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HelmetContent } from './HelmetContent/HelmetContent';
-// import { Navbar } from '../../components/Navbar/Navbar';
+import { Navbar } from '../../components/Navbar/Navbar';
 
 type PageProps = {
     children: React.ReactNode,
