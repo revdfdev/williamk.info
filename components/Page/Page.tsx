@@ -3,7 +3,7 @@ import { Fonts } from '../Fonts/Fonts';
 import './Page.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HelmetContent } from './HelmetContent/HelmetContent';
-import { Navbar } from '../../components/Navbar/Navbar';
+import { Wavbar } from '../Wavbar/Wavbar';
 
 type PageProps = {
     children: React.ReactNode,
@@ -18,7 +18,7 @@ type PageProps = {
  *      William Kwok
  *      June 7, 2019
  */
-export const Page: React.FC<PageProps> = ({ children }) => {
+export const Page: React.FC<PageProps> = ({ children, pathname }) => {
     /**
      * On component mount, load the fonts. 
      */
@@ -28,7 +28,7 @@ export const Page: React.FC<PageProps> = ({ children }) => {
 
     return <>
         <HelmetContent />
-        {/* <Navbar /> */}
+        <Wavbar pathname={pathname} />
         <div className="page-content">
             {children}
         </div>

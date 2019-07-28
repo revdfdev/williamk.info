@@ -1,0 +1,12 @@
+.wavbar, .wavbar a {
+    color: white !important;
+}
+
+.wavbar {
+    height: 3.5em;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wavbar, .wavbar-collapse, .wavbar nav {
+    background-color: var(--theme-color);
+}
