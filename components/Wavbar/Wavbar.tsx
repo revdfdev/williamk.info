@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Navbar, Nav, NavItem, NavbarToggler, Collapse } from 'reactstrap';
-import { Logo } from './Logo/Logo';
+// import { Logo } from './Logo/Logo';
 import './Wavbar.css';
+import { Logo } from './Logo/Logo';
 
 type WavbarLink = {
     title: string,
@@ -29,6 +30,7 @@ export const Wavbar: React.FC<WavbarProps> = ({ pathname }) => {
 
     return <header>
         <Navbar className="wavbar" dark expand="md">
+            <Logo />
             <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
             <Collapse isOpen={isOpen} navbar className="wavbar-collapse">
                 <Nav className="ml-auto" navbar>
