@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Navbar, Nav, NavItem, NavbarToggler, Collapse } from 'reactstrap';
+import { Logo } from './Logo/Logo';
 import './Wavbar.css';
 
 type WavbarLink = {
