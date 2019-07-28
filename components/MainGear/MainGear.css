@@ -4,21 +4,21 @@
     position: absolute;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 660px) {
     .main-gear-svg {
         width: 80vw;
         height: 80vw;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 660px) and (max-width: 1120px) {
     .main-gear-svg {
         width: 60vw;
         height: 60vw;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1120px) {
     .main-gear-svg {
         width: 600px;
         height: 600px;

@@ -1,6 +1,6 @@
 .main-intro {
     min-height: 100vh;
-    padding-top: 7vh;
+    padding-top: 1vh;
 }
 
 .main-see-below {
@@ -11,21 +11,21 @@
     margin-top: 7vh;
 } */
 
-@media (max-width: 768px) {
+@media (max-width: 660px) {
     .main-gear-container {
         margin-left: 5vw;
         height: 80vw;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 660px) {
     .main-gear-container {
         margin-left: 15vw;
         height: 60vw;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1120px) {
     .main-gear-container {
         margin-left: calc(45vw - 300px);
         height: 600px;
