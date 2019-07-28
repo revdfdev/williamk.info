@@ -4,6 +4,7 @@
 
 .wavbar {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 2rem;
 }
 
 .wavbar, .wavbar-collapse, .wavbar nav {

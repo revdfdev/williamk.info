@@ -2,3 +2,4 @@
 declare module '*.jpg' { export default '' as string; }
 declare module '*.png' { export default '' as string; }
 declare module 'react-reveal*' { export default any }
+// declare module 'next-page-transitions*' { export default any }

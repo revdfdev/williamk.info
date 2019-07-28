@@ -30,7 +30,14 @@ export const Wavbar: React.FC<WavbarProps> = ({ pathname }) => {
 
     return <header>
         <Navbar className="wavbar" dark expand="md">
-            <Logo />
+            {pathname === "/" ?
+                <Logo /> :
+                <Link href="/">
+                    <a>
+                        <Logo />
+                    </a>
+                </Link>
+            }
             <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
             <Collapse isOpen={isOpen} navbar className="wavbar-collapse">
                 <Nav className="ml-auto" navbar>
