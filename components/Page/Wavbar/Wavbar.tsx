@@ -8,7 +8,7 @@ import Fade from 'react-reveal/Fade';
 
 type WavbarLink = {
     title: string,
-    link: string,
+    link?: string,
     hashLinkIfIndex?: string
 }
 
@@ -26,6 +26,10 @@ const wavbarLinks: WavbarLink[] = [
         title: "Projects",
         link: "/projects",
         hashLinkIfIndex: "#projects"
+    },
+    {
+        title: "Skills",
+        hashLinkIfIndex: "#skills"
     }
 ]
 
@@ -51,16 +55,16 @@ export const Wavbar: React.FC<WavbarProps> = ({ pathname }) => {
                 <Collapse isOpen={isOpen} navbar className="wavbar-collapse">
                     <Nav className="ml-auto" navbar>
                         {wavbarLinks.map(wavbarLink => {
-                            if (wavbarLink.link === pathname) {
-                                return <React.Fragment key={wavbarLink.link}></React.Fragment>
-                            }
-
                             if (pathname === "/" && wavbarLink.hashLinkIfIndex) {
                                 return <NavItem key={wavbarLink.link}>
                                     <a href={wavbarLink.hashLinkIfIndex}>
                                         {wavbarLink.title}
                                     </a>
                                 </NavItem>
+                            }
+
+                            if (wavbarLink.link === pathname || !wavbarLink.link) {
+                                return <React.Fragment key={wavbarLink.link}></React.Fragment>
                             }
 
                             return <NavItem key={wavbarLink.link}>

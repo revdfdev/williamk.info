@@ -1,0 +1,19 @@
+.skill-item-item {
+    margin: 0;
+    padding: 0;
+}
+
+.skill-item-item-progress {
+    height: 10px;
+}
+
+.skill-item-item-progress .progress-bar {
+    background-color: var(--theme-color);
+}
+
+.skill-item-item-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

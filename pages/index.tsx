@@ -45,7 +45,13 @@ const IndexPage: React.FC = () => {
             </div>
         </ScrollableAnchor>
         <div className="spacer"></div>
-        <Skills />
+
+        <ScrollableAnchor id="skills">
+            <div>
+                <Skills />
+            </div>
+        </ScrollableAnchor>
+        <div className="spacer"></div>
     </>
 }
 
