@@ -56,7 +56,7 @@ export const Wavbar: React.FC<WavbarProps> = ({ pathname }) => {
                     <Nav className="ml-auto" navbar>
                         {wavbarLinks.map(wavbarLink => {
                             if (pathname === "/" && wavbarLink.hashLinkIfIndex) {
-                                return <NavItem key={wavbarLink.link}>
+                                return <NavItem key={wavbarLink.title}>
                                     <a href={wavbarLink.hashLinkIfIndex}>
                                         {wavbarLink.title}
                                     </a>
@@ -64,10 +64,10 @@ export const Wavbar: React.FC<WavbarProps> = ({ pathname }) => {
                             }
 
                             if (wavbarLink.link === pathname || !wavbarLink.link) {
-                                return <React.Fragment key={wavbarLink.link}></React.Fragment>
+                                return <React.Fragment key={wavbarLink.title}></React.Fragment>
                             }
 
-                            return <NavItem key={wavbarLink.link}>
+                            return <NavItem key={wavbarLink.title}>
                                 <Link href={wavbarLink.link}>
                                     <a>
                                         {wavbarLink.title}

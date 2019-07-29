@@ -46,15 +46,39 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projectName }) => {
                     Tools used: {proj.tools.join(", ")}
                 </p>}
 
-                {proj.seeAlso && <>
-                    See also:&nbsp;
-                {proj.seeAlso.map(seeAlsoItem => {
-                        return <Link key={seeAlsoItem.key} href={`/projects/${seeAlsoItem.key}`}>
-                            <a>
-                                {seeAlsoItem.title}
-                            </a>
-                        </Link>
-                    })}</>}
+                {proj.seeAlso && <div>
+                    See also:
+                    <ul className="projects-ul">
+                        {proj.seeAlso.map(seeAlsoItem => {
+                            return <li key={seeAlsoItem.key}>
+                                <Link href={`/projects/${seeAlsoItem.key}`}>
+                                    <a>
+                                        {seeAlsoItem.title}
+                                    </a>
+                                </Link>
+                            </li>
+                        })}
+                    </ul>
+                </div>
+                }
+
+                {proj.links && <div>
+                    Links:
+                    <ul className="projects-ul">
+                        {proj.links.map(link => {
+                            if (link.internal) {
+                                return <li key={link.title}>
+                                    <Link href={link.link}>
+                                        <a>
+                                            {link.title}
+                                        </a>
+                                    </Link>
+                                </li>
+                            }
+                            return <li key={link.title}><a href={link.link}>{link.title}</a></li>
+                        })}
+                    </ul>
+                </div>}
             </div>
         </>}
     </>

@@ -18,3 +18,7 @@
 .projects-image img {
     width: 100%;
 }
+
+.projects-ul {
+    list-style-position: inside;
+}

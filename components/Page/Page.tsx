@@ -4,6 +4,7 @@ import './Page.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HelmetContent } from './HelmetContent/HelmetContent';
 import { Wavbar } from './Wavbar/Wavbar';
+import { Footbar } from './Footbar/Footbar';
 
 type PageProps = {
     children: React.ReactNode,
@@ -23,12 +24,15 @@ export const Page: React.FC<PageProps> = ({ children, pathname }) => {
     return <>
         <HelmetContent />
         {loaded &&
-            <>
-                <Wavbar pathname={pathname} />
-                <div className="page-content">
-                    {children}
+            <div style={{ position: 'relative', minHeight: '100vh' }}>
+                <div style={{ paddingBottom: '5rem' }}>
+                    <Wavbar pathname={pathname} />
+                    <div className="page-content">
+                        {children}
+                    </div>
                 </div>
-            </>
+                <Footbar />
+            </div>
         }
     </>
 }
