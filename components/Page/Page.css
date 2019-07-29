@@ -38,6 +38,10 @@ a, a:hover, a:active, a:focus, a:visited {
     margin-bottom: 15px;
 }
 
+.margin-top-15px {
+    margin-top: 15px;
+}
+
 button {
     background-color: var(--theme-color) !important;
 }
