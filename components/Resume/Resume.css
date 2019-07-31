@@ -1,0 +1,14 @@
+.resume-dev-canvas {
+    display: none;
+}
+
+.resume-page {
+    height: 792px;
+    width: 612px;
+    padding: none;
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px #888;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
