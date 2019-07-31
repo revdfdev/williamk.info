@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, View, Text, Document, StyleSheet, PDFViewer, Font } from '@react-pdf/renderer'
+import { Page, View, Document, StyleSheet, Font } from '@react-pdf/renderer'
 
 Font.register({
     family: 'Quicksand',
