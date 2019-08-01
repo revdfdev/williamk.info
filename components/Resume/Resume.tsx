@@ -39,8 +39,7 @@ export const Resume: React.FC = () => {
                         ref={pdf}
                     >
                         <ResumePage>
-                            <Test />
-                            <FontAwesomeIcon icon={faGithub} size="2x" />
+
                         </ResumePage>
                     </PDFExport>
                 </>

@@ -1,17 +1,32 @@
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import canvg from 'canvg';
+import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 
 export class CanvasConverter {
-    public devCanvas: HTMLCanvasElement | null;
+    private devCanvas: HTMLCanvasElement | null;
     constructor() {
         this.devCanvas = null;
     }
 
-    registerDevCanvas = (devCanvas: HTMLCanvasElement | null) => {
+    public registerDevCanvas = (devCanvas: HTMLCanvasElement | null) => {
         this.devCanvas = devCanvas;
     }
 
-    getDevCanvas = () => {
-        return this.devCanvas;
+    public convertFontAwesomeIconToImage = (icon: IconDefinition, size: SizeProp, className: string) => {
+        this.throwIfCanvasUnregistered();
+
+        let htmlString = ReactDOMServer.renderToStaticMarkup(
+            <FontAwesomeIcon size={size} icon={icon} className={className} />);
+        canvg(this.devCanvas!, htmlString);
+        return this.devCanvas!.toDataURL("image/png");
     }
 
+    private throwIfCanvasUnregistered = () => {
+        if (!this.devCanvas) {
+            throw new Error("Canvas not registered");
+        }
+    }
 }
