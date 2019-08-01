@@ -1,13 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { PDFExport } from '@progress/kendo-react-pdf';
 import { ResumePage } from './ResumePage/ResumePage';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'reactstrap';
 import './Resume.css';
 import { CanvasConverter } from './CanvasConverter/CanvasConverter';
 import { DevCanvasContext } from './DevCanvasContext/DevCanvasContext';
-import { Test } from './Test';
+import { ResumeHeader } from './ResumeHeader/ResumeHeader';
 
 export const Resume: React.FC = () => {
     const pdf = useRef<PDFExport>(null);
@@ -39,7 +37,7 @@ export const Resume: React.FC = () => {
                         ref={pdf}
                     >
                         <ResumePage>
-
+                            <ResumeHeader />
                         </ResumePage>
                     </PDFExport>
                 </>

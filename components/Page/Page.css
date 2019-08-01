@@ -65,3 +65,8 @@ button.btn-tertiary {
     border: 1px solid var(--theme-color) !important;
     align-items: flex-start;
 }
+
+.margin-none {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}

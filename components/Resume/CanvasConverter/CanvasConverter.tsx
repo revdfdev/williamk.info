@@ -15,11 +15,11 @@ export class CanvasConverter {
         this.devCanvas = devCanvas;
     }
 
-    public convertFontAwesomeIconToImage = (icon: IconDefinition, size: SizeProp, className: string) => {
+    public convertFontAwesomeIconToImage = (icon: IconDefinition, size: SizeProp, style: React.CSSProperties) => {
         this.throwIfCanvasUnregistered();
 
         let htmlString = ReactDOMServer.renderToStaticMarkup(
-            <FontAwesomeIcon size={size} icon={icon} className={className} />);
+            <FontAwesomeIcon size={size} icon={icon} style={style} fixedWidth />);
         canvg(this.devCanvas!, htmlString);
         return this.devCanvas!.toDataURL("image/png");
     }

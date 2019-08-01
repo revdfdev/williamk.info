@@ -1,0 +1,35 @@
+:root {
+    --resume-header-font-weight: 500;
+    --resume-header-font-size: 40px;
+    --resume-header-icon-size: 15px;
+    --resume-header-icon-render: 500px;
+    --resume-header-children-margin-left: 5px;
+    --resume-header-children-font-size: 11px;
+    --resume-header-contact-icon-container: 20px;
+}
+
+.resume-contact-icon-container {
+    height: var(--resume-header-contact-icon-container);
+}
+
+.resume-contact-children {
+    color: var(--theme-color);
+    margin-left: var(--resume-header-children-margin-left);
+    font-size: var(--resume-header-children-font-size);
+}
+
+.resume-contact-icon {
+    width: var(--resume-header-icon-size);
+    height: var(--resume-header-icon-size);
+}
+
+.resume-header-main {
+    width: calc(var(--resume-inWidth)/2);
+    font-weight: var(--resume-header-font-weight);
+    font-size: var(--resume-header-font-size);
+    color: var(--theme-color);
+}
+
+.resume-header-side {
+    width: calc(var(--resume-inWidth)/4);
+}
