@@ -1,5 +1,4 @@
 import React from 'react';
-import { useFonts } from '../Fonts/Fonts';
 import './Page.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HelmetContent } from './HelmetContent/HelmetContent';
@@ -20,19 +19,16 @@ type PageProps = {
  *      June 7, 2019
  */
 export const Page: React.FC<PageProps> = ({ children, pathname }) => {
-    const loaded = useFonts();
     return <>
         <HelmetContent />
-        {loaded &&
-            <div style={{ position: 'relative', minHeight: '100vh' }}>
-                <div style={{ paddingBottom: '5rem' }}>
-                    <Wavbar pathname={pathname} />
-                    <div className="page-content">
-                        {children}
-                    </div>
+        <div style={{ position: 'relative', minHeight: '100vh' }}>
+            <div style={{ paddingBottom: '5rem' }}>
+                <Wavbar pathname={pathname} />
+                <div className="page-content">
+                    {children}
                 </div>
-                <Footbar />
             </div>
-        }
+            <Footbar />
+        </div>
     </>
 }
