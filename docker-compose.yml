@@ -3,7 +3,7 @@ services:
   nginx:
     build:
       context: ./_nginx
-    image: wkwok16/nginx_site
+    image: wkwok16/personal_nginx
     links:
         - node1:node1
     ports:
@@ -12,6 +12,6 @@ services:
   node1:
     build:
       context: ./
-    image: wkwok16/next_site
+    image: wkwok16/personal_site
     ports:
         - "3000"
