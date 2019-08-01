@@ -1,5 +1,5 @@
 :root {
-    --resume-header-font-weight: 500;
+    --resume-header-font-weight: bold;
     --resume-header-font-size: 40px;
     --resume-header-icon-size: 15px;
     --resume-header-icon-render: 500px;

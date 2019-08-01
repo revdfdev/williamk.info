@@ -31,6 +31,7 @@ export const Resume: React.FC = () => {
                         }
                     }}>Download</Button>
                     <PDFExport paperSize={'Letter'}
+                        scale={0.9} /** dont ask me */
                         fileName="WilliamKwokResume.pdf"
                         title="William Kwok"
                         subject="William Kwok"
