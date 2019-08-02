@@ -30,7 +30,7 @@ const LINKS: SocialLinkType[] = [
     {
         icon: faFileAlt,
         text: "Resume",
-        link: "/Resume",
+        link: "/resume",
         internalLink: true
     },
     {
