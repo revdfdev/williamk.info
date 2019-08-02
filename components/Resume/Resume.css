@@ -1,9 +1,29 @@
 :root {
-    --resume-width: 692px;
+    --resume-width: 612px;
     --resume-height: 792px;
-    --resume-inWidth: 668px;
+    --resume-inWidth: 588px;
     --resume-inHeight: 768px;
     --resume-page-padding: 12px;
+    --resume-header-font-weight: bold;
+    --resume-header-font-size: 40px;
+    --resume-header-icon-size: 15px;
+    --resume-header-icon-render: 500px;
+    --resume-header-children-margin-left: 5px;
+    --resume-header-children-font-size: 11px;
+    --resume-header-contact-icon-container: 20px;
+    --resume-header-contact-children-text-margin-top: 2px;
+    --resume-header-container-margin-top: -6px;
+    --resume-section-icon-size: 25px;
+    --resume-section-icon-margin-right: 5px;
+    --resume-section-font-weight: bold;
+    --resume-section-font-size: 20px;
+    --resume-section-border-length: 100%;
+    --resume-section-content-padding: 3px;
+}
+
+.resume-padding-sides-none {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .resume-dev-canvas {
@@ -19,4 +39,8 @@
     margin: auto;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+.resume-all-skills {
+    margin-top: -5px;
 }

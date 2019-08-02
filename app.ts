@@ -22,6 +22,10 @@ app.prepare()
     .then(() => {
         const server = express();
 
+        server.get('/blog/:blogId', (req: Request, res: Response) => {
+            return app.render(req, res, '/blog', { blogId: req.params.blogId || "" });
+        })
+
         server.get('/projects/:projectName', (req: Request, res: Response) => {
             return app.render(req, res, '/projects', { projectName: req.params.projectName || "" });
         })

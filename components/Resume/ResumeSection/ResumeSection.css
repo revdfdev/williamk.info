@@ -1,0 +1,22 @@
+.resume-section-icon {
+    height: var(--resume-section-icon-size);
+    width: var(--resume-section-icon-size);
+    /* margin-left: var(--resume-page-padding); */
+    margin-right: var(--resume-section-icon-margin-right);
+}
+
+.resume-section-heading {
+    color: var(--theme-color);
+    font-weight: var(--resume-section-font-weight);
+    font-size: var(--resume-section-font-size);
+}
+
+.resume-section-total-heading {
+    border-bottom: 1px solid var(--theme-color);
+    width: var(--resume-section-border-length);
+}
+
+.resume-section-content {
+    padding: var(--resume-section-content-padding);
+    padding-bottom: 0px;
+}

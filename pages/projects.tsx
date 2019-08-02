@@ -4,6 +4,7 @@ import { Projects } from '../components/Projects/Projects';
 import { Button } from 'reactstrap';
 import Link from 'next/link';
 import '../pageStyles/projects.css';
+import Fade from 'react-reveal/Fade';
 
 type ProjectsPageProps = {
     projectName: string
@@ -17,69 +18,71 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ projectName }) => {
             <div className="spacer"></div>
         </>}
         {proj && <>
-            <Link href="/">
-                <a>
-                    <Button className="whitetext projects-buttons">
-                        Home
+            <Fade duration={1500}>
+                <Link href="/">
+                    <a>
+                        <Button className="whitetext projects-buttons">
+                            Home
                     </Button>
-                </a>
-            </Link>
-            <Link href="/projects">
-                <a>
-                    <Button className="whitetext projects-buttons">
-                        All projects
+                    </a>
+                </Link>
+                <Link href="/projects">
+                    <a>
+                        <Button className="whitetext projects-buttons">
+                            All projects
                     </Button>
-                </a>
-            </Link>
+                    </a>
+                </Link>
 
-            <h1>{proj.title}</h1>
-            <h2>{proj.blurb}</h2>
-            <h3>{proj.startDate}{proj.endDate ? ` - ${proj.endDate}` : ""}</h3>
-            <div className="projects-image">
-                <img src={proj.image} alt={proj.title} />
-            </div>
-            <div>
-                {proj.description && proj.description.map(paragraph => {
-                    return <p key={paragraph}>{paragraph}</p>
-                })}
-                {proj.tools && <p>
-                    Tools used: {proj.tools.join(", ")}
-                </p>}
-
-                {proj.seeAlso && <div>
-                    See also:
-                    <ul className="projects-ul">
-                        {proj.seeAlso.map(seeAlsoItem => {
-                            return <li key={seeAlsoItem.key}>
-                                <Link href={`/projects/${seeAlsoItem.key}`}>
-                                    <a>
-                                        {seeAlsoItem.title}
-                                    </a>
-                                </Link>
-                            </li>
-                        })}
-                    </ul>
+                <h1>{proj.title}</h1>
+                <h2>{proj.blurb}</h2>
+                <h3>{proj.startDate}{proj.endDate ? ` - ${proj.endDate}` : ""}</h3>
+                <div className="projects-image">
+                    <img src={proj.image} alt={proj.title} />
                 </div>
-                }
+                <div>
+                    {proj.description && proj.description.map(paragraph => {
+                        return <p key={paragraph}>{paragraph}</p>
+                    })}
+                    {proj.tools && <p>
+                        Tools used: {proj.tools.join(", ")}
+                    </p>}
 
-                {proj.links && <div>
-                    Links:
+                    {proj.seeAlso && <div>
+                        See also:
                     <ul className="projects-ul">
-                        {proj.links.map(link => {
-                            if (link.internal) {
-                                return <li key={link.title}>
-                                    <Link href={link.link}>
+                            {proj.seeAlso.map(seeAlsoItem => {
+                                return <li key={seeAlsoItem.key}>
+                                    <Link href={`/projects/${seeAlsoItem.key}`}>
                                         <a>
-                                            {link.title}
+                                            {seeAlsoItem.title}
                                         </a>
                                     </Link>
                                 </li>
-                            }
-                            return <li key={link.title}><a href={link.link}>{link.title}</a></li>
-                        })}
-                    </ul>
-                </div>}
-            </div>
+                            })}
+                        </ul>
+                    </div>
+                    }
+
+                    {proj.links && <div>
+                        Links:
+                    <ul className="projects-ul">
+                            {proj.links.map(link => {
+                                if (link.internal) {
+                                    return <li key={link.title}>
+                                        <Link href={link.link}>
+                                            <a>
+                                                {link.title}
+                                            </a>
+                                        </Link>
+                                    </li>
+                                }
+                                return <li key={link.title}><a href={link.link}>{link.title}</a></li>
+                            })}
+                        </ul>
+                    </div>}
+                </div>
+            </Fade>
         </>}
     </>
 }

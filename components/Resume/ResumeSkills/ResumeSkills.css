@@ -1,0 +1,15 @@
+.resume-skills-container {
+    text-align: left;
+    height: 1em;
+    margin-top: 0px;
+}
+
+.resume-skills-heading {
+    font-size: 12px;
+    color: var(--theme-color);
+    font-weight: bold;
+}
+
+.resume-skills-skills {
+    font-size: 10px;
+}

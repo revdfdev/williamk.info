@@ -1,11 +1,5 @@
-:root {
-    --resume-header-font-weight: bold;
-    --resume-header-font-size: 40px;
-    --resume-header-icon-size: 15px;
-    --resume-header-icon-render: 500px;
-    --resume-header-children-margin-left: 5px;
-    --resume-header-children-font-size: 11px;
-    --resume-header-contact-icon-container: 20px;
+.resume-header-container {
+    margin-top: var(--resume-header-container-margin-top) !important;
 }
 
 .resume-contact-icon-container {
@@ -16,6 +10,7 @@
     color: var(--theme-color);
     margin-left: var(--resume-header-children-margin-left);
     font-size: var(--resume-header-children-font-size);
+    margin-top: var(--resume-header-contact-children-text-margin-top);
 }
 
 .resume-contact-icon {

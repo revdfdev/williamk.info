@@ -1,0 +1,28 @@
+.resume-item-dates {
+    text-align: right;
+    font-size: 12px;
+}
+
+.resume-item-heading {
+    color: var(--theme-color);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.resume-item-content {
+    font-size: 10px;
+    text-align: left;
+    padding-left: 0px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
+.resume-item-bullet {
+    width: 4px;
+    height: 4px;
+    margin-right: 5px;
+}
+
+.resume-item-container {
+    margin-bottom: 1px;
+}
