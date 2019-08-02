@@ -6,12 +6,16 @@
 #       June 8, 2019
 
 # Pull in containers that were just created from the docker compose
-docker pull wkwok16/nginx_site
-docker pull wkwok16/next_site
+docker pull wkwok16/personal_site
+docker pull wkwok16/personal_nginx
 
 # Remove old containers
-docker rm -f site
-docker rm -f next_site
+docker rm -f personal_nginx
+docker rm -f personal_site
+
+# Copy over certs
+sudo cp /etc/letsencrypt/live/williamk.info/fullchain.pem ~/certs
+sudo cp /etc/letsencrypt/live/williamk.info/privkey.pem ~/certs
 
 # First, run the container containing the nextjs application, because the nginx relies on this one
 # to forward a port to.
@@ -21,14 +25,14 @@ docker rm -f next_site
 # data and you should be fine.
 docker run -d \
 -p 3000:3000 \
---name next_site \
-wkwok16/next_site
+--name personal_site \
+wkwok16/personal_site
 
 # Run the nginx container passing in the certification files as read only, and making sure the 
 # network is running off the host so it can bypass any weird issues. 
 # TODO: change
 docker run -d \
+-v /etc/letsencrypt:/etc/letsencrypt:ro \
 --net=host \
--v /certs:/certs/iuga:ro \
---name site \
-wkwok16/nginx_site
+--name personal_nginx \
+wkwok16/personal_nginx
