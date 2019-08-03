@@ -12,6 +12,7 @@ import skillsIcon from '../_assets/Images/Resume/wrenchIcon.png';
 import { ResumeItemProps } from './ResumeItem/ResumeItem';
 import { ResumeItems } from './ResumeItems/ResumeItems';
 import { ResumeSkills } from './ResumeSkills/ResumeSkills';
+import ReactGA from 'react-ga';
 
 // uncomment for conversion ///////////////////////////////
 // import { CanvasConverter } from './CanvasConverter/CanvasConverter';
@@ -139,7 +140,12 @@ export const Resume: React.FC = () => {
 
             <Button onClick={() => {
                 if (pdf.current) {
-                    pdf.current.save()
+                    ReactGA.event({
+                        category: "Resume",
+                        action: "Download Resume"
+                    });
+                    pdf.current.save();
+
                 }
             }} className="margin-bottom-15px">Download</Button>
             <PDFExport paperSize={'Letter'}

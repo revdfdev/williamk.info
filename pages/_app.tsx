@@ -2,6 +2,13 @@ import React from 'react';
 import App, { Container, NextAppContext } from 'next/app';
 import { withRouter, WithRouterProps } from 'next/router';
 import { Page } from '../components/Page/Page';
+import ReactGA from 'react-ga';
+import Router from 'next/router';
+
+ReactGA.initialize("UA-141499923-1");
+Router.events.on("routeChangeComplete", (url: string) => {
+    ReactGA.pageview(url);
+});
 
 /**
  * RouterProps is the type that must be used in order to get `withRouter` working. 
