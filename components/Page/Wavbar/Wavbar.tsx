@@ -30,6 +30,10 @@ const wavbarLinks: WavbarLink[] = [
     {
         title: "Skills",
         hashLinkIfIndex: "#skills"
+    },
+    {
+        title: "Resume",
+        link: "/resume"
     }
 ]
 

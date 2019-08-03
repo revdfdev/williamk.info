@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 import Router from 'next/router';
 
 ReactGA.initialize("UA-141499923-1");
+
 Router.events.on("routeChangeComplete", (url: string) => {
     ReactGA.pageview(url);
 });
@@ -39,6 +40,10 @@ class CustomApp extends App<RouterProps> {
         }
 
         return { pageProps };
+    }
+
+    componentDidMount() {
+        ReactGA.pageview(this.props.router.pathname);
     }
 
     render() {
