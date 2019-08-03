@@ -26,6 +26,7 @@ sudo cp /etc/letsencrypt/live/williamk.info/privkey.pem ~/certs
 docker run -d \
 -p 3000:3000 \
 --name personal_site \
+--restart unless-stopped \
 wkwok16/personal_site
 
 # Run the nginx container passing in the certification files as read only, and making sure the 
@@ -35,4 +36,5 @@ docker run -d \
 -v /etc/letsencrypt:/etc/letsencrypt:ro \
 --net=host \
 --name personal_nginx \
+--restart unless-stopped \
 wkwok16/personal_nginx

@@ -44,6 +44,14 @@ class CustomApp extends App<RouterProps> {
 
     componentDidMount() {
         ReactGA.pageview(this.props.router.pathname);
+
+        if (this.props.router.query && this.props.router.query.q) {
+            ReactGA.event({
+                category: "Visit",
+                action: "Special Page Visit",
+                label: this.props.router.query.q as string
+            });
+        }
     }
 
     render() {
