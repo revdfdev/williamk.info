@@ -12,6 +12,12 @@ body {
     overflow-x: hidden;
 }
 
+.content-outer-page {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
 .page-content {
     margin: auto;
     width: 90vw;

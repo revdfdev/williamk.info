@@ -15,4 +15,4 @@ docker-compose push
 # SSH into the IUGA server and run an update script that is passed in through the ssh
 # 
 # MAKE SURE TO CHANGE THE USERNAME TO YOUR OWN!
-ssh ec2-user@52.88.27.163 'bash -s' < zz_deploy_helper_update.sh
+ssh ec2-user@williamk.info 'bash -s' < zz_deploy_helper_update.sh

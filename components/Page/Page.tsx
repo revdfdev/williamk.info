@@ -21,7 +21,7 @@ type PageProps = {
 export const Page: React.FC<PageProps> = ({ children, pathname }) => {
     return <>
         <HelmetContent />
-        <div style={{ position: 'relative', minHeight: '100vh' }}>
+        <div className="content-outer-page">
             <div style={{ paddingBottom: '5rem' }}>
                 <Wavbar pathname={pathname} />
                 <div className="page-content">

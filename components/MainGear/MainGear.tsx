@@ -3,6 +3,7 @@ import Anime from 'react-anime';
 import MainImage from '../../components/_assets/Images/Main/Main.jpg';
 import OnRock from '../../components/_assets/Images/Main/OnRock.jpg';
 import './MainGear.css';
+import Fade from 'react-reveal/Fade';
 
 type MainImagePreset = {
     image: string,
@@ -128,7 +129,7 @@ export const MainGear: React.FC = () => {
                 c2.4-8.9,4.2-18,5.4-27.3C363.3,416.2,371.9,411.4,381.9,411.4z"/>}
                 </>
         </svg>
-        <svg className="main-gear-svg" 
+            <svg className="main-gear-svg" 
             version="1.1" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="-75 167 460 460"> 
@@ -139,7 +140,7 @@ export const MainGear: React.FC = () => {
                 <use xlinkHref="#clip-circle" style={{overflow: "visible"}} />
             </clipPath>
             <g className="gear-image">
-                <image className={`gear-image-image ${complete ? "gear-image-show" : "gear-image-hidden"}`}
+                <image style={{opacity: 0}} className={`gear-image-image ${complete ? "gear-image-show" : "gear-image-hidden"}`}
                     xlinkHref={metaDataRandom.image} transform={`matrix(
                         ${metaDataRandom.ZOOM} 0 0 ${metaDataRandom.ZOOM}
                         ${metaDataRandom.XPOS} 
